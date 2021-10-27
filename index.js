@@ -20,7 +20,7 @@ function transformRecords(records) {
 
         operation[record.action] = {
             _index: record.index,
-            _type: record.type,
+            _type: "_doc",
             _id: record.id
         };
 
@@ -47,7 +47,6 @@ function transformRecords(records) {
  */
 function validateOperation(operation) {
     assert(operation.index, 'index is required');
-    assert(operation.type, 'type is required');
 
     operation.action = operation.action || 'index';
 
