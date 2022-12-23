@@ -20,7 +20,6 @@ function transformRecords(records) {
 
         operation[record.action] = {
             _index: record.index,
-            _type: "_doc",
             _id: record.id
         };
 
